@@ -7,7 +7,10 @@ import { provideRouter } from '@angular/router';
 import { AppLayout } from './app/components/app-layout/app-layout.component';
 
 // define all routes
+// if the url is empty --> redirect to the HomePage
 export const routes: Routes = [
+    
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomePage },
 ];
 
