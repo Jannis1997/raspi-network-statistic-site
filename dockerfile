@@ -1,3 +1,4 @@
+# build-stage --> build angular
 # get the base node.js image (slim version)
 FROM node:lts-slim as build
 
@@ -13,6 +14,7 @@ RUN npm ci
 COPY . . 
 RUN ng build --configuration=production
 
+# runtime-stage --> nginx delivers the website
 # set up the nginx-webserver for the access of the index.html and the website
 FROM nginx:stable AS final
 EXPOSE 80

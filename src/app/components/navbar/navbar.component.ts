@@ -2,7 +2,9 @@ import { Component } from "@angular/core";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
+import { RouterOutlet } from "@angular/router";
 
 /** basic drawer as foundation for sidenav and main content separation */
 @Component({
@@ -14,7 +16,9 @@ import { MatListModule } from "@angular/material/list";
         MatSidenavModule,
         MatButtonModule,
         MatIconModule,
-        MatListModule],
+        MatListModule,
+        MatToolbarModule,
+        RouterOutlet],
 })
 
 export class SideNav {
